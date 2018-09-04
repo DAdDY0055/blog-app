@@ -1,10 +1,11 @@
 <%= form_with(model: @contact, local: true) do |form| %>
-  <%= @contact.errors.any? %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <h2>Contactは1文字以上140文字以下で入力してください。"</h2>
+      <h2>Contactは1文字以上140文字以下で入力してください。</h2>
     </div>
   <% end %>
+  
+  <p><%= notice %></p>
 
   <div class="contact">
     <br><%= form.label :name %></br>
