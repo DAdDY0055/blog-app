@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :contacts
+  post '/contacts/new', to: 'contacts#new'
+
   resources :blogs do
     collection do
       post :confirm
